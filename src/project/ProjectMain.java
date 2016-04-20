@@ -61,7 +61,16 @@ public class ProjectMain {
   }
 
   private void employeeMenuChoice(String choice) {
-    
+    switch (choice) {
+    case "1":
+      login();
+      break;
+    case "0":
+      System.out.println("시스템을 종료하겠습니다.");
+      System.exit(0);
+    default:
+      System.out.println("잘못 입력하셨습니다.");
+    }
   }
 
   private void doAdmin() {
@@ -75,7 +84,16 @@ public class ProjectMain {
   }
 
   private void adminMenuChoice(String choice) {
-    
+    switch (choice) {
+    case "1":
+      login();
+      break;
+    case "0":
+      System.out.println("시스템을 종료하겠습니다.");
+      System.exit(0);
+    default:
+      System.out.println("잘못 입력하셨습니다.");
+    }
   }
 
 }
