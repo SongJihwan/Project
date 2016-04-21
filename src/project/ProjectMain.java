@@ -16,11 +16,10 @@ public class ProjectMain {
   }
   
   public void run() {
-    System.out.println("1. 로그인\n0. 종료");
-    System.out.print("선택> ");
-    String choice = keyScan.nextLine();
-    
     while (true) {
+      System.out.println("1. 로그인\n0. 종료");
+      System.out.print("선택> ");
+      choice = keyScan.nextLine();
       mainMenuChoice(choice);
     }
   }
@@ -39,7 +38,7 @@ public class ProjectMain {
   }
 
   private void login() {
-    System.out.print("ID or Email : ");
+    System.out.print("Email : ");
     id = keyScan.nextLine();
     System.out.print("비밀번호 : ");
     pw = keyScan.nextLine();
@@ -55,7 +54,7 @@ public class ProjectMain {
     System.out.print("선택> ");
     choice = keyScan.nextLine();
     
-    while (true) {
+    while (!choice.equals("3")) {
       employeeMenuChoice(choice);
     }
   }
@@ -63,14 +62,27 @@ public class ProjectMain {
   private void employeeMenuChoice(String choice) {
     switch (choice) {
     case "1":
-      login();
+      employeeInfoUpdate();
       break;
-    case "0":
-      System.out.println("시스템을 종료하겠습니다.");
-      System.exit(0);
+    case "2":
+      projectParticipate();
+      break;
+    case "3":
+      System.out.println();
+      break;
     default:
       System.out.println("잘못 입력하셨습니다.");
     }
+  }
+
+  private void projectParticipate() {
+    // TODO Auto-generated method stub
+    
+  }
+
+  private void employeeInfoUpdate() {
+    // TODO Auto-generated method stub
+    
   }
 
   private void doAdmin() {
@@ -78,7 +90,7 @@ public class ProjectMain {
     System.out.print("선택> ");
     choice = keyScan.nextLine();
     
-    while (true) {
+    while (!choice.equals("6")) {
       adminMenuChoice(choice);
     }
   }
@@ -86,14 +98,51 @@ public class ProjectMain {
   private void adminMenuChoice(String choice) {
     switch (choice) {
     case "1":
-      login();
+      empoloyeeSupervise();
       break;
-    case "0":
-      System.out.println("시스템을 종료하겠습니다.");
-      System.exit(0);
+    case "2":
+      certificationSupervise();
+      break;
+    case "3":
+      teamSupervise();
+      break;
+    case "4":
+      pmSelect();
+      break;
+    case "5":
+      adminInfoUpdate();
+      break;
+    case "6":
+      System.out.println();
+      break;
     default:
       System.out.println("잘못 입력하셨습니다.");
     }
+  }
+
+  private void adminInfoUpdate() {
+    // TODO Auto-generated method stub
+    
+  }
+
+  private void pmSelect() {
+    // TODO Auto-generated method stub
+    
+  }
+
+  private void teamSupervise() {
+    // TODO Auto-generated method stub
+    
+  }
+
+  private void certificationSupervise() {
+    // TODO Auto-generated method stub
+    
+  }
+
+  private void empoloyeeSupervise() {
+    // TODO Auto-generated method stub
+    
   }
 
 }
